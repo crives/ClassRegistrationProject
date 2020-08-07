@@ -23,7 +23,7 @@ public class Course implements Serializable {
 	@Column(name = "name")
 	String name;
 	
-	@Column(name = "imagePath")
+	@Column(name = "credits")
 	int credits;
 	
 	public Course(Long courseId, String department, String name, int credits) {
