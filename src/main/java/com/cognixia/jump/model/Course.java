@@ -4,8 +4,6 @@ import java.io.Serializable;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
@@ -14,8 +12,8 @@ public class Course implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Long courseId;
+	@Column(name = "course_id", unique=true, columnDefinition="varchar(6)")
+	private String courseId;
 	
 	@Column(name = "department")
 	private String department;
@@ -25,8 +23,8 @@ public class Course implements Serializable {
 	
 	@Column(name = "credits")
 	int credits;
-	
-	public Course(Long courseId, String department, String name, int credits) {
+
+	public Course(String courseId, String department, String name, int credits) {
 		super();
 		this.courseId = courseId;
 		this.department = department;
@@ -34,11 +32,11 @@ public class Course implements Serializable {
 		this.credits = credits;
 	}
 
-	public Long getCourseId() {
+	public String getCourseId() {
 		return courseId;
 	}
 
-	public void setCourseId(Long courseId) {
+	public void setCourseId(String courseId) {
 		this.courseId = courseId;
 	}
 
