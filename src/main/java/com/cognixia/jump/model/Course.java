@@ -23,13 +23,22 @@ public class Course implements Serializable {
 	
 	@Column(name = "credits")
 	int credits;
+	
+	@Column(name = "description", columnDefinition="varchar(500)")
+	String description;
+	
+	@Column(name = "prereqs", columnDefinition="varchar(255)")
+	String prerequisites;
 
-	public Course(String courseId, String department, String name, int credits) {
+	public Course(String courseId, String department, String name, int credits, String description,
+			String prerequisites) {
 		super();
 		this.courseId = courseId;
 		this.department = department;
 		this.name = name;
 		this.credits = credits;
+		this.description = description;
+		this.prerequisites = prerequisites;
 	}
 
 	public String getCourseId() {
@@ -64,11 +73,27 @@ public class Course implements Serializable {
 		this.credits = credits;
 	}
 
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	public String getPrerequisites() {
+		return prerequisites;
+	}
+
+	public void setPrerequisites(String prerequisites) {
+		this.prerequisites = prerequisites;
+	}
+
 	@Override
 	public String toString() {
 		return "Course [courseId=" + courseId + ", department=" + department + ", name=" + name + ", credits=" + credits
-				+ "]";
+				+ ", description=" + description + ", prerequisites=" + prerequisites + "]";
 	}
-	
+
 	
 }
