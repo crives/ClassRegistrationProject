@@ -13,9 +13,13 @@ import com.cognixia.jump.model.Student;
 
 public interface StudentRepository extends JpaRepository<Student, Long> {
 	
-//	
-//	@Query("select username from student s")
-//	List<String> getUsernames();
+	
+	@Query("select username from Student")
+	List<String> getUsernames();
+	
+	@Query("select password from Student")
+	List<String> getPasswords();
+
 
 }
 

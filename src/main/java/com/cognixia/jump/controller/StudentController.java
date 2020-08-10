@@ -23,12 +23,12 @@ public class StudentController {
 		return service.findAll();
 	}
 	
-//	@GetMapping("/students/usernames")
-//	public List<String> getAllUsernames(){
-//		List<String> usernames = service.getUsernames();
-//		
-//		return usernames;
+	@GetMapping("/students/usernames")
+	public List<String> getAllUsernames(){
+		List<String> usernames = service.getUsernames();
+		
+		return usernames;
 
 
-//}
+}
 }
