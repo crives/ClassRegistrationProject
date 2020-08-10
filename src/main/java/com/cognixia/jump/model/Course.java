@@ -94,6 +94,6 @@ public class Course implements Serializable {
 		return "Course [courseId=" + courseId + ", department=" + department + ", name=" + name + ", credits=" + credits
 				+ ", description=" + description + ", prerequisites=" + prerequisites + "]";
 	}
-
+	
 	
 }
