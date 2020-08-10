@@ -155,7 +155,7 @@ public class Registration implements Serializable {
 				+ courseId + ", department=" + department + ", name=" + name + ", credits=" + credits + "]";
 	}
 
-	
+	//test2
 	//test commit
 	
 	
