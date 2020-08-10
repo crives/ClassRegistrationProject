@@ -57,107 +57,91 @@ public class Registration implements Serializable {
 		this.credits = credits;
 	}
 
-
-
 	public Long getId() {
 		return id;
 	}
-
-
 
 	public void setId(Long id) {
 		this.id = id;
 	}
 
-
-
 	public String getFirstName() {
 		return firstName;
 	}
-
-
 
 	public void setFirstName(String firstName) {
 		this.firstName = firstName;
 	}
 
-
-
 	public String getLastName() {
 		return lastName;
 	}
-
-
 
 	public void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
 
+<<<<<<< HEAD
 
 
 	public String getCourseId() {
+=======
+	public Long getCourseId() {
+>>>>>>> branch 'KacperBranch' of https://github.com/crives/ClassRegistrationProject.git
 		return courseId;
 	}
 
+<<<<<<< HEAD
 
 
 	public void setCourseId(String courseId) {
+=======
+	public void setCourseId(Long courseId) {
+>>>>>>> branch 'KacperBranch' of https://github.com/crives/ClassRegistrationProject.git
 		this.courseId = courseId;
 	}
-
-
 
 	public String getDepartment() {
 		return department;
 	}
 
-
-
 	public void setDepartment(String department) {
 		this.department = department;
 	}
-
-
 
 	public String getName() {
 		return name;
 	}
 
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
-
-
 
 	public int getCredits() {
 		return credits;
 	}
 
-
-
 	public void setCredits(int credits) {
 		this.credits = credits;
 	}
-
-
 
 	public static long getSerialversionuid() {
 		return serialVersionUID;
 	}
 
-
-
 	@Override
 	public String toString() {
 		return "Registration [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", courseId="
 				+ courseId + ", department=" + department + ", name=" + name + ", credits=" + credits + "]";
+<<<<<<< HEAD
 	}
 
 	//test2
 	//test commit
 	
 	
+=======
+	}	
+>>>>>>> branch 'KacperBranch' of https://github.com/crives/ClassRegistrationProject.git
 
 }
