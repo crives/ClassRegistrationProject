@@ -29,7 +29,7 @@ public class Registration implements Serializable {
 	
 	@NotBlank
 	@Column(unique = true, nullable = false)
-	private Long courseId;
+	private String courseId;
 	
 	@NotBlank
 	@Column(unique = true, nullable = false)
@@ -45,7 +45,7 @@ public class Registration implements Serializable {
 
 	
 
-	public Registration(Long id, @NotBlank String firstName, @NotBlank String lastName, @NotBlank Long courseId,
+	public Registration(Long id, @NotBlank String firstName, @NotBlank String lastName, @NotBlank String courseId,
 			@NotBlank String department, @NotBlank String name, @NotBlank int credits) {
 		super();
 		this.id = id;
@@ -95,13 +95,13 @@ public class Registration implements Serializable {
 
 
 
-	public Long getCourseId() {
+	public String getCourseId() {
 		return courseId;
 	}
 
 
 
-	public void setCourseId(Long courseId) {
+	public void setCourseId(String courseId) {
 		this.courseId = courseId;
 	}
 
