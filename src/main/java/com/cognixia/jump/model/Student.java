@@ -35,6 +35,10 @@ public class Student implements Serializable {
 	
 	@Column(columnDefinition = "int default '0'")
 	private Integer creditHours;
+	
+	public Student() {
+		this(-1L,"NA","NA","NA","NA",1);
+	}
 
 	public Student(Long id, @NotBlank String username, @NotBlank String password, @NotBlank String firstName,
 			@NotBlank String lastName, Integer creditHours) {
