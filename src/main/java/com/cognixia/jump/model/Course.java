@@ -95,6 +95,7 @@ public class Course implements Serializable {
 				+ ", description=" + description + ", prerequisites=" + prerequisites + "]";
 	}
 	//test
+	//test2
 
 	
 }
