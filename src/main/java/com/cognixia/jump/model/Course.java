@@ -94,11 +94,7 @@ public class Course implements Serializable {
 		return "Course [courseId=" + courseId + ", department=" + department + ", name=" + name + ", credits=" + credits
 				+ ", description=" + description + ", prerequisites=" + prerequisites + "]";
 	}
-<<<<<<< HEAD
-	
-=======
 	//test
 
->>>>>>> branch 'KacperBranch' of https://github.com/crives/ClassRegistrationProject.git
 	
 }
