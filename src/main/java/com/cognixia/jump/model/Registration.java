@@ -29,7 +29,7 @@ public class Registration implements Serializable {
 	
 	@NotBlank
 	@Column(unique = true, nullable = false)
-	private String courseId;
+	private Long courseId;
 	
 	@NotBlank
 	@Column(unique = true, nullable = false)
@@ -45,7 +45,7 @@ public class Registration implements Serializable {
 
 	
 
-	public Registration(Long id, @NotBlank String firstName, @NotBlank String lastName, @NotBlank String courseId,
+	public Registration(Long id, @NotBlank String firstName, @NotBlank String lastName, @NotBlank Long courseId,
 			@NotBlank String department, @NotBlank String name, @NotBlank int credits) {
 		super();
 		this.id = id;
@@ -81,23 +81,11 @@ public class Registration implements Serializable {
 		this.lastName = lastName;
 	}
 
-<<<<<<< HEAD
-
-
-	public String getCourseId() {
-=======
 	public Long getCourseId() {
->>>>>>> branch 'KacperBranch' of https://github.com/crives/ClassRegistrationProject.git
 		return courseId;
 	}
 
-<<<<<<< HEAD
-
-
-	public void setCourseId(String courseId) {
-=======
 	public void setCourseId(Long courseId) {
->>>>>>> branch 'KacperBranch' of https://github.com/crives/ClassRegistrationProject.git
 		this.courseId = courseId;
 	}
 
@@ -133,15 +121,6 @@ public class Registration implements Serializable {
 	public String toString() {
 		return "Registration [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", courseId="
 				+ courseId + ", department=" + department + ", name=" + name + ", credits=" + credits + "]";
-<<<<<<< HEAD
-	}
-
-	//test2
-	//test commit
-	
-	
-=======
 	}	
->>>>>>> branch 'KacperBranch' of https://github.com/crives/ClassRegistrationProject.git
 
 }
