@@ -104,9 +104,5 @@ public class Student implements Serializable {
 		return "Student id=" + id + ", username=" + username + ", password=" + password + ", firstName=" + firstName
 				+ ", lastName=" + lastName + ", creditHours=" + creditHours + "   ";
 	}
-	
-	
-	
-	
 
 }
