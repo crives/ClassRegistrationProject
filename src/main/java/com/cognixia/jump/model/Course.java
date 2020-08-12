@@ -1,7 +1,6 @@
 package com.cognixia.jump.model;
 
 import java.io.Serializable;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -30,6 +29,7 @@ public class Course implements Serializable {
 	@Column(name = "prereqs", columnDefinition="varchar(255)")
 	String prerequisites;
 
+	
 	public Course(String courseId, String department, String name, int credits, String description,
 			String prerequisites) {
 		super();
@@ -41,6 +41,11 @@ public class Course implements Serializable {
 		this.prerequisites = prerequisites;
 	}
 
+	
+	public Course() {
+		this("N/A", "N/A", "N/A", -1, "N/A", "N/A");
+	}
+	
 	public String getCourseId() {
 		return courseId;
 	}
@@ -94,9 +99,5 @@ public class Course implements Serializable {
 		return "Course [courseId=" + courseId + ", department=" + department + ", name=" + name + ", credits=" + credits
 				+ ", description=" + description + ", prerequisites=" + prerequisites + "]";
 	}
-	//test
-	//test2
-	//test3  
-	//edit
-	//change
+
 }
