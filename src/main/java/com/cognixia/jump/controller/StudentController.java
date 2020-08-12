@@ -31,4 +31,13 @@ public class StudentController {
 
 
 }
+	
+	@GetMapping("/students/passwords")
+	public List<String> getAllPasswords(){
+		List<String> passwords = service.getPasswords();
+		
+		return passwords;
+
+
+}
 }

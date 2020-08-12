@@ -11,12 +11,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="index.js"></script>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="index.css">
 
-    
+    <script src="index.js"></script>
+
     <title>Login Page</title>
 
    
@@ -40,8 +40,8 @@
         </div>
         <div class="column-right" style = "text-align: center;" >
           <h1>Welcome to the Univerity Webpage</h1> 
-
-          <div class="container h-100">
+	
+		<div class="container h-100">
             <div class="d-flex justify-content-center h-100">
                 <div class="user_card">
                     <div class="d-flex justify-content-center">
@@ -50,23 +50,24 @@
                         </div>
                     </div>
                     <div class="d-flex justify-content-center form_container">
-                        <form>
+                        <form onsubmit = "initialize()" action = "display.html">
                             <div class="input-group mb-3">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-user"></i></span>
                                 </div>
-                                <input type="text" name="" id = "username" class="form-control input_user" value="" placeholder="username">
+                                <input type="text" id = "username" class="form-control input_user" placeholder="username">
                             </div>
                             <div class="input-group mb-2">
                                 <div class="input-group-append">
                                     <span class="input-group-text"><i class="fas fa-key"></i></span>
                                 </div>
-                                <input type="password" name="password" id = "password" class="form-control input_pass" value="" placeholder="password">
+                                <input type="password" id = "password" class="form-control input_pass"  placeholder="password">
                             </div>
                            
                                 <div class="d-flex justify-content-center mt-3 login_container">
-                         <button type="button" name="button" onclck ="initialize()" class="btn btn-success">Login</button>
-                       </div>
+                                
+ 									<input type="submit" >                      
+ 									 </div>
                         </form>
                     </div>
 
@@ -74,6 +75,8 @@
                     </div>
                 </div>
             </div>
+		
+		
     
             <img src="images/college1.jpeg" width="350px" height="275px" alt="">
         </div>
