@@ -33,11 +33,15 @@ public class Student implements Serializable {
 	@NotBlank
 	private String lastName;
 	
-	@Column(columnDefinition = "decimal(5,1) default '0.0'")
-	private Double creditHours;
+	@Column(columnDefinition = "int default '0'")
+	private Integer creditHours;
+	
+	public Student() {
+		this(-1L,"NA","NA","NA","NA",1);
+	}
 
 	public Student(Long id, @NotBlank String username, @NotBlank String password, @NotBlank String firstName,
-			@NotBlank String lastName, Double creditHours) {
+			@NotBlank String lastName, Integer creditHours) {
 		super();
 		this.id = id;
 		this.username = username;
@@ -87,11 +91,11 @@ public class Student implements Serializable {
 		this.lastName = lastName;
 	}
 
-	public Double getCreditHours() {
+	public Integer getCreditHours() {
 		return creditHours;
 	}
 
-	public void setCreditHours(Double creditHours) {
+	public void setCreditHours(Integer creditHours) {
 		this.creditHours = creditHours;
 	}
 
