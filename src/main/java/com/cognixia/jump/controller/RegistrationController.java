@@ -29,7 +29,7 @@ public class RegistrationController {
 	} 
 	
 	@GetMapping("/Registration/{studentId}")
-	public List<Registration> getStudent(@PathVariable long studentId) throws Exception{
+	public List<Registration> getRegistrationByStudentId(@PathVariable long studentId) throws Exception{
 		
 		Optional<List<Registration>> optional = service.findByStudentId(studentId);
 		 
