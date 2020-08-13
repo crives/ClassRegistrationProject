@@ -43,10 +43,10 @@ public class CourseController {
 		return new Course();
 	}
 	
-	@GetMapping("/ /")
-	public List<Course> getCourseByDepartment(String department) {
+	@GetMapping("/course/department/{department}")
+	public List<Course> getCourseByDepartment(@PathVariable String department) {
 		
-		List<Course> coursesInMajor = new ArrayList<>();
+		List<Course> coursesInDepartment = new ArrayList<>();
 		
 		for(int i = 0; i < studentDatabase.size(); i++) {
 			
@@ -61,6 +61,9 @@ public class CourseController {
 		return studentsInMajor;
 
 	}
+	
+	
+	@GetMapping("/course/{studendId}")
 	
 	@PostMapping("/add/student")
 	public void addStudent(@RequestBody Student newStudent) {
