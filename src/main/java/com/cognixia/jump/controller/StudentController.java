@@ -5,6 +5,7 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -37,7 +38,31 @@ public class StudentController {
 		List<String> passwords = service.getPasswords();
 		
 		return passwords;
+	}
+		
+
+	@GetMapping("/students/id/{username}")
+	public Long getIdbyUsername(@PathVariable String username){
+		List<Student> students = service.findAll();
+		Long notfound = Long.parseLong("0");
+		for(Student student: students) {
+			if(student.getUsername().equals(username)) {
+				return student.getId();
+			
+			}
+		
+			
+		}
+		return notfound;
+	
+		
+	}
+		
+			
+			
+			
+		
 
 
-}
+
 }
